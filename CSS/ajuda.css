@@ -1,0 +1,71 @@
+body{
+    width: 100%;
+    height: 100%;
+    margin:0px;
+}
+#background{
+    position: absolute;
+    top:13%;
+    left: 20%;
+    width: 60% ;
+    height: 70%;
+    z-index: -1;
+
+
+}
+#ladoEsquerdo{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    z-index: -2;
+    left: 0%;
+    background-color: #004E94;
+}
+
+#ajuda{
+    color: yellow;
+    z-index: 0;
+    position: absolute;
+    top: 10%;
+    left: 18%;
+    font-size: 10vmin;
+}
+
+#texto{
+    color: #004E94;
+    z-index: 0;
+    position: absolute;
+    left: 60%;
+    right: 5%;
+    top: 4%;
+    font-size: 3vmin;
+    text-align: center;
+}
+
+#objetivo{
+    color: black;
+}
+
+#objetivo1{
+    font-size: 4vmin;
+}
+
+
+#voltar{
+    position: absolute;
+    height: 5%;
+    width: 10%;
+    top: 90%;
+    left: 85%;
+    font-size: 170%;
+}
+
+#voltar:hover{
+    font-size: 200%;
+}
+.botoes:hover{
+    background-color: #004E94;
+    color: yellow;
+    font-size: 3.5vmin;
+    font-weight: lighter;
+}

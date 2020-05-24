@@ -1,0 +1,95 @@
+body{
+    position: absolute;
+    width: 95%;
+    height: 50%;
+    margin-top: 1%;
+    background-color: #004E94;
+
+}
+#1{
+
+    padding-top: 0%;
+    margin-left: 10px;
+    padding-right: 5px;
+    width: 100px;
+
+    background-color: aqua;
+    color: aqua;
+    border: black 2px solid;
+}
+.areaJogo{
+    position: relative;
+    margin-left: 3%;
+    margin-top: 10px;
+    border: black 2px solid;
+}
+#imagemFundo{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    z-index: -1;
+}
+canvas{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+#zonaBotoes{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    border: black 2px solid;
+    margin: 5%;
+    margin-top: 0%;
+    width: 20%;
+    height: 20%;
+    background-color: sandybrown;
+}
+.botoes{
+    background-color: saddlebrown;
+}
+#dinheiro{
+    position: absolute;
+    left: 50%;
+    top: -22%;
+    font-size: 4vmin;
+    color: gold ;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+#warrior{
+    position: absolute;
+    top: 35%;
+    left: 2%;
+    color: gold ;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+#ranged{
+    position: absolute;
+    top: 35%;
+    left: 23%;
+    color: gold ;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+#vitoria{
+    position: absolute;
+    top: 40%;
+    left: 43%;
+    width: 20%;
+    height: 35%;
+    background-color: gold;
+    visibility: hidden;
+}
+#textoVitoria{
+    text-align: center;
+}
+#voltar{
+    position: relative;
+    width: 30%;
+    height: 20%;
+    left: 36%;
+    margin-top: 7%;
+}
