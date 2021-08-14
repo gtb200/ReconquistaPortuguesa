@@ -26,13 +26,16 @@ function setContas(ev) {
     document.getElementById("apagarConta").addEventListener("click",apagarConta);
     contas=ev.data[0];
     selecionado=ev.data[1];
-    for (let i=0;i<contas.length;i++){
-        botoes[i].textContent=contas[i].nome+" "+"->"+" "+"       Niveis feitos: "+findMax(contas[i]);
-        botoes[i].addEventListener("click",selecionar);
+    if(contas!=null) {
+
+        for (let i = 0; i < contas.length; i++) {
+            botoes[i].textContent = contas[i].nome + " " + "->" + " " + "       Niveis feitos: " + findMax(contas[i]);
+            botoes[i].addEventListener("click", selecionar);
+        }
+        if (selecionado != null) textoSelecionado.textContent = "Selecionado -> " + selecionado.nome;
+        window.removeEventListener("message", setContas);
     }
-    if(selecionado!=null)textoSelecionado.textContent="Selecionado -> "+selecionado.nome;
-    window.removeEventListener("message",setContas);
-}
+    }
 function findMax(conta) {
     let max=0;
 
@@ -45,7 +48,7 @@ function findMax(conta) {
     return max;
 }
 function criar(ev) {
-    if(contas.length==4){
+    if(contas!=null&&contas.length==4){
         alert("Número máximo de contas atingido");
     }else {
         var nome = prompt("Qual nome quer dar á conta?", "Nome");
@@ -113,6 +116,7 @@ function apagarConta() {
     }
 }
 function checkIfExists(nome) {
+    if(contas==null)return false;
     for (let i=0;i<contas.length;i++){
         if(nome==contas[i].nome){
             return true;

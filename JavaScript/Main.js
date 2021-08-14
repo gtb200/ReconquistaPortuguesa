@@ -6,8 +6,22 @@
 }());
 
 function main(){
-    var contas=JSON.parse(localStorage.getItem("contas"));
+    var aux=JSON.parse(localStorage.getItem("contas"));
+    var contas=[];
+    if(aux==null){
+        contas=[];
+
+    }else {
+        for (let i=0;i<aux.length;i++){
+            contas.push(new Jogador(aux[i].nome));
+            contas[i].dinheiro=aux[i].dinheiro;
+            contas[i].upgradesRanged=aux[i].upgradesRanged;
+            contas[i].upgradesMelee=aux[i].upgradesMelee;
+            contas[i].niveisFeitos=aux[i].niveisFeitos;
+        }
+    }
     var selecionado;
+
     var musica=0;
     var som=0;
 
@@ -34,6 +48,7 @@ function main(){
                 if (!(comparador[1] in selecionado.niveisFeitos))
                     selecionado.niveisFeitos.push(parseInt(comparador[1]));
                 frame.src = "menuBatalhar.html";
+                console.log(selecionado.constructor.name);
                 selecionado.apagarRepetidos();
                 await sleep(100);
                 selecionado.dinheiro += (45 + 25 * (parseInt(comparador[1])));
