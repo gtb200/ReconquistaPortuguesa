@@ -64,7 +64,7 @@ nav{
     width: 50%;
     height: 15%;
     font-size: 3vmin;
-    transition-duration: 1s;
+    transition-duration: 0s;
     transition-delay: 0.1s;
     visibility: hidden;
 }
